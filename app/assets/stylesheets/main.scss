@@ -2242,6 +2242,7 @@
 	input[type="text"],
 	input[type="password"],
 	input[type="email"],
+	input[type="file"],
 	select,
 	textarea {
 		-moz-appearance: none;
@@ -2262,6 +2263,7 @@
 		input[type="text"]:invalid,
 		input[type="password"]:invalid,
 		input[type="email"]:invalid,
+		input[type="file"]:invalid,
 		select:invalid,
 		textarea:invalid {
 			box-shadow: none;
@@ -2302,6 +2304,7 @@
 	input[type="text"],
 	input[type="password"],
 	input[type="email"],
+	input[type="file"],
 	select {
 		height: 2.75em;
 	}
@@ -2401,6 +2404,7 @@
 	input[type="text"],
 	input[type="password"],
 	input[type="email"],
+	input[type="file"],
 	select,
 	textarea {
 		background: rgba(144, 144, 144, 0.075);
@@ -2410,6 +2414,7 @@
 		input[type="text"]:focus,
 		input[type="password"]:focus,
 		input[type="email"]:focus,
+		input[type="file"]:focus,
 		select:focus,
 		textarea:focus {
 			border-color: #F64747;
@@ -2951,6 +2956,7 @@
 			.wrapper.style1 input[type="text"],
 			.wrapper.style1 input[type="password"],
 			.wrapper.style1 input[type="email"],
+			.wrapper.style1 input[type="file"],
 			.wrapper.style1 select,
 			.wrapper.style1 textarea {
 				background: rgba(255, 255, 255, 0.075);
@@ -2960,6 +2966,7 @@
 				.wrapper.style1 input[type="text"]:focus,
 				.wrapper.style1 input[type="password"]:focus,
 				.wrapper.style1 input[type="email"]:focus,
+				.wrapper.style1 input[type="file"]:focus,
 				.wrapper.style1 select:focus,
 				.wrapper.style1 textarea:focus {
 					border-color: #ffffff;
@@ -3155,6 +3162,7 @@
 			.wrapper.style2 input[type="text"],
 			.wrapper.style2 input[type="password"],
 			.wrapper.style2 input[type="email"],
+			.wrapper.style2 input[type="file"],
 			.wrapper.style2 select,
 			.wrapper.style2 textarea {
 				background: rgba(255, 255, 255, 0.075);

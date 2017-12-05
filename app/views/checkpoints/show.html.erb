@@ -1,0 +1,58 @@
+<section id="post" class="wrapper bg-img" data-bg="banner2.jpg">
+	<div class="inner">
+		<article class="box">
+			<header>
+				<!--- Image of the checkpoint -->
+				<h2><%= @checkpoint.name %></h2>
+				<% if @checkpoint.has_photo? %>
+					<% @checkpoint.photos.each do |c| %>
+						<%= image_tag(c.url, class: "checkpoint-image") %>
+					<% end %>
+				<% end %>
+				<p>
+					
+				</p>
+			</header>
+			<div class="content">
+				<h4 class='center'>
+					When you get to <%= @checkpoint.name %>, check-in and upload a selfie!
+				</h4>
+				<p class='center'>
+					<%= form_tag("/search", method: "get") do %>
+						<div class="row uniform">
+							<div class="6u 12u$(xsmall)">
+							  <%= file_field_tag "file" %>
+							  <%= submit_tag("Check in!", class: "button fit") %>
+							</div>
+						</div>
+					<% end %>
+				</p>
+			    <div id="map"></div>
+			</div>
+			<footer>
+				<ul class="actions">
+					<li><a href="#" class="button alt icon fa-chevron-left"><span class="label">Previous</span></a></li>
+					<li><a href="#" class="button alt icon fa-chevron-right"><span class="label">Next</span></a></li>
+				</ul>
+			</footer>
+		</article>
+	</div>
+</section>
+
+<script>
+  function initMap() {
+    var uluru = {lat: <%= @checkpoint.lat %>, lng: <%= @checkpoint.lng %>};
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 18,
+      center: uluru
+    });
+    var marker = new google.maps.Marker({
+      position: uluru,
+      map: map
+    });
+  }
+
+</script>
+<script async defer
+src="https://maps.googleapis.com/maps/api/js?key= AIzaSyCntsdsfYlmZJf2NWyY6Kw1Q7SbyakDJ4E&callback=initMap">
+</script>
