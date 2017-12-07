@@ -1,0 +1,31 @@
+<section id="post" class="wrapper bg-img" data-bg="banner2.jpg">
+	<div class="inner">
+		<article class="box">
+			<header>
+				<!--- Image of the checkpoint -->
+				<h2>Upcoming Races</h2>
+				
+				<p>
+					<ul class='alt'>
+						<% @races.each do |race| %>
+							<li>
+								<header>
+									<h3><%= link_to race.name, race %></h3>
+									<p><%= race.formatted_date %></p>
+								</header>
+							</li>
+						<% end %>
+					</ul>
+				</p>
+			</header>
+			<div class="content">
+			
+			</div>
+
+			<footer>
+				<%= link_to("Add a New Race", new_race_path) %>
+			</footer>
+		
+		</article>
+	</div>
+</section>

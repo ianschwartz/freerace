@@ -1,0 +1,29 @@
+<section id="post" class="wrapper bg-img" data-bg="banner2.jpg">
+	<div class="inner">
+		<article class="box">
+			<header>
+				<h2><%= @race.name %></h2>
+				<p><%= @race.formatted_date %></p>
+			</header>
+			<div class="content">
+				<p class='center'>
+					<% if @race.has_start? %>
+						Starts at <%= link_to @race.start_point.name, @race.start_point %>
+						<% if @race.has_checkins? %>
+							<ul class='alt center'>
+								<% @race.checkins.each do |c| %>
+									<button class='button fit special'>Click To Reveal Checkpoint</button>
+								<% end %>
+							</ul>
+						<% end %>
+					<% else %>
+						The organizer has not set a start for this race yet. Stay tuned!
+					<% end %>
+				</p>			
+			</div>
+			<footer>
+				<header><%= link_to("All Upcoming Races", races_path) %></header>
+			</footer>
+		</article>
+	</div>
+</section>

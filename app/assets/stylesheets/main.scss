@@ -1784,7 +1784,7 @@
 	}
 
 	a {
-		color: #F64747;
+		color: #2dd881;
 	}
 
 	strong, b {
@@ -2026,7 +2026,7 @@
 		input[type="button"].special,
 		button.special,
 		.button.special {
-			background-color: #F64747;
+			background-color: #2dd881;
 			color: #ffffff !important;
 		}
 
@@ -2241,7 +2241,9 @@
 
 	input[type="text"],
 	input[type="password"],
-	input[type="email"],
+	input[type="date"],
+	input[type="datetime-local"],
+	input[type="date"],
 	input[type="file"],
 	select,
 	textarea {
@@ -2263,6 +2265,8 @@
 		input[type="text"]:invalid,
 		input[type="password"]:invalid,
 		input[type="email"]:invalid,
+		input[type="datetime-local"]:invalid,
+		input[type="date"]:invalid,
 		input[type="file"]:invalid,
 		select:invalid,
 		textarea:invalid {
@@ -2304,6 +2308,8 @@
 	input[type="text"],
 	input[type="password"],
 	input[type="email"],
+	input[type="datetime-local"],
+	input[type="date"],
 	input[type="file"],
 	select {
 		height: 2.75em;
@@ -2404,6 +2410,8 @@
 	input[type="text"],
 	input[type="password"],
 	input[type="email"],
+	input[type="datetime-local"],
+	input[type="date"],
 	input[type="file"],
 	select,
 	textarea {
@@ -2414,11 +2422,13 @@
 		input[type="text"]:focus,
 		input[type="password"]:focus,
 		input[type="email"]:focus,
+		input[type="datetime-local"]:focus,
+		input[type="date"]:focus,
 		input[type="file"]:focus,
 		select:focus,
 		textarea:focus {
-			border-color: #F64747;
-			box-shadow: 0 0 0 1px #F64747;
+			border-color: #2dd881;
+			box-shadow: 0 0 0 1px #2dd881;
 		}
 
 	.select-wrapper:before {
@@ -2438,15 +2448,15 @@
 
 	input[type="checkbox"]:checked + label:before,
 	input[type="radio"]:checked + label:before {
-		background-color: #F64747;
-		border-color: #F64747;
+		background-color: #2dd881;
+		border-color: #2dd881;
 		color: #ffffff;
 	}
 
 	input[type="checkbox"]:focus + label:before,
 	input[type="radio"]:focus + label:before {
-		border-color: #F64747;
-		box-shadow: 0 0 0 1px #F64747;
+		border-color: #2dd881;
+		box-shadow: 0 0 0 1px #2dd881;
 	}
 
 	::-webkit-input-placeholder {
@@ -2848,7 +2858,7 @@
 	}
 
 		.wrapper.style1 {
-			background-color: #F64747;
+			background-color: #2dd881;
 			color: #fdd1d1;
 		}
 
@@ -2946,7 +2956,7 @@
 				.wrapper.style1 button.special,
 				.wrapper.style1 .button.special {
 					background-color: #ffffff;
-					color: #F64747 !important;
+					color: #2dd881 !important;
 				}
 
 			.wrapper.style1 label {
@@ -2992,7 +3002,7 @@
 			.wrapper.style1 input[type="radio"]:checked + label:before {
 				background-color: #ffffff;
 				border-color: #ffffff;
-				color: #F64747;
+				color: #2dd881;
 			}
 
 			.wrapper.style1 input[type="checkbox"]:focus + label:before,
@@ -3063,7 +3073,7 @@
 			}
 
 			.wrapper.style2 a {
-				color: #F64747;
+				color: #2dd881;
 			}
 
 			.wrapper.style2 strong, .wrapper.style2 b {
@@ -3135,7 +3145,7 @@
 				.wrapper.style2 input[type="button"].special,
 				.wrapper.style2 button.special,
 				.wrapper.style2 .button.special {
-					background-color: #F64747;
+					background-color: #2dd881;
 					color: #ffffff !important;
 				}
 
@@ -3174,8 +3184,8 @@
 				.wrapper.style2 input[type="email"]:focus,
 				.wrapper.style2 select:focus,
 				.wrapper.style2 textarea:focus {
-					border-color: #F64747;
-					box-shadow: 0 0 0 1px #F64747;
+					border-color: #2dd881;
+					box-shadow: 0 0 0 1px #2dd881;
 				}
 
 			.wrapper.style2 .select-wrapper:before {
@@ -3195,15 +3205,15 @@
 
 			.wrapper.style2 input[type="checkbox"]:checked + label:before,
 			.wrapper.style2 input[type="radio"]:checked + label:before {
-				background-color: #F64747;
-				border-color: #F64747;
+				background-color: #2dd881;
+				border-color: #2dd881;
 				color: #ffffff;
 			}
 
 			.wrapper.style2 input[type="checkbox"]:focus + label:before,
 			.wrapper.style2 input[type="radio"]:focus + label:before {
-				border-color: #F64747;
-				box-shadow: 0 0 0 1px #F64747;
+				border-color: #2dd881;
+				box-shadow: 0 0 0 1px #2dd881;
 			}
 
 			.wrapper.style2 ::-webkit-input-placeholder {
@@ -3345,7 +3355,7 @@
 
 		#header.alt {
 			top: 0;
-			background: #F64747;
+			background: #2dd881;
 		}
 
 		#header .logo {
@@ -3474,7 +3484,7 @@
 		-ms-transition: -ms-transform 0.5s ease, box-shadow 0.5s ease, visibility 0.5s;
 		transition: transform 0.5s ease, box-shadow 0.5s ease, visibility 0.5s;
 		-webkit-overflow-scrolling: touch;
-		background: #f64242;
+		background: #103808;
 		box-shadow: none;
 		color: #ffffff;
 		height: 100%;
@@ -4182,10 +4192,10 @@
 /* Footer */
 
 	#footer {
-		background-color: #F64747;
+		background-color: #103808;
 		color: #fdd1d1;
 		padding: 6em 0 4em 0;
-		background: #F64747;
+		background: #103808;
 	}
 
 		#footer input, #footer select, #footer textarea {
@@ -4282,7 +4292,7 @@
 			#footer button.special,
 			#footer .button.special {
 				background-color: #ffffff;
-				color: #F64747 !important;
+				color: #2dd881 !important;
 			}
 
 		#footer label {
@@ -4326,7 +4336,7 @@
 		#footer input[type="radio"]:checked + label:before {
 			background-color: #ffffff;
 			border-color: #ffffff;
-			color: #F64747;
+			color: #2dd881;
 		}
 
 		#footer input[type="checkbox"]:focus + label:before,

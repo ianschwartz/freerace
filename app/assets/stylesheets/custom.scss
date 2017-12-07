@@ -32,3 +32,13 @@
 .center {
 	text-align: center;
 }
+
+#date-select {
+	select {
+		width: auto;
+		display: inline;
+		option {
+			background: black;
+		}
+	}
+}

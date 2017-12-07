@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>RaceApp</title>
+    <title>FreeRace</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -11,7 +11,7 @@
   <body>
 <!-- Header -->
 	<header id="header">
-		<div class="logo"><%= link_to "UrbanTri", root_path %></div>
+		<div class="logo"><%= link_to "FreeRace", root_path %></div>
 		<a href="#menu"><span>Menu</span></a>
 	</header>
 
@@ -20,7 +20,7 @@
 		<ul class="links">
 			<li><%= link_to "Home", root_path %></li>
 			<li><%= link_to "FAQ", faq_path %></li>
-			<li><a href="elements.html">Elements</a></li>
+			<li><%= link_to("Upcoming Races", races_path) %></li>
 		</ul>
 	</nav>
 

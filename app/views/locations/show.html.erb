@@ -2,11 +2,11 @@
 	<div class="inner">
 		<article class="box">
 			<header>
-				<!--- Image of the checkpoint -->
-				<h2><%= @checkpoint.name %></h2>
-				<% if @checkpoint.has_photo? %>
-					<% @checkpoint.photos.each do |c| %>
-						<%= image_tag(c.url, class: "checkpoint-image") %>
+				<!--- Image of the location -->
+				<h2><%= @location.name %></h2>
+				<% if @location.has_photo? %>
+					<% @location.photos.each do |c| %>
+						<%= image_tag(c.url, class: "location-image") %>
 					<% end %>
 				<% end %>
 				<p>
@@ -15,7 +15,7 @@
 			</header>
 			<div class="content">
 				<h4 class='center'>
-					When you get to <%= @checkpoint.name %>, check-in and upload a selfie!
+					When you get to <%= @location.name %>, check-in and upload a selfie!
 				</h4>
 				<p class='center'>
 					<%= form_tag("/search", method: "get") do %>
@@ -41,7 +41,7 @@
 
 <script>
   function initMap() {
-    var uluru = {lat: <%= @checkpoint.lat %>, lng: <%= @checkpoint.lng %>};
+    var uluru = {lat: <%= @location.lat %>, lng: <%= @location.lng %>};
     var map = new google.maps.Map(document.getElementById('map'), {
       zoom: 18,
       center: uluru

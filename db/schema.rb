@@ -10,24 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171204211133) do
+ActiveRecord::Schema.define(version: 20171207145750) do
 
-  create_table "checkpoints", force: :cascade do |t|
+  create_table "locations", force: :cascade do |t|
     t.float "lat", limit: 10
     t.float "lng", limit: 10
     t.string "name"
     t.integer "race_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["race_id"], name: "index_checkpoints_on_race_id"
+    t.index ["race_id"], name: "index_locations_on_race_id"
   end
 
   create_table "photos", force: :cascade do |t|
     t.string "url"
-    t.integer "checkpoint_id"
+    t.integer "location_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["checkpoint_id"], name: "index_photos_on_checkpoint_id"
+    t.index ["location_id"], name: "index_photos_on_location_id"
   end
 
   create_table "races", force: :cascade do |t|

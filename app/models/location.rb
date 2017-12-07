@@ -1,4 +1,4 @@
-class Checkpoint < ApplicationRecord
+class Location < ApplicationRecord
 	belongs_to :race
 	has_many :photos
 
