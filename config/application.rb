@@ -10,6 +10,7 @@ module RaceApp
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.1
+    config.exceptions_app = self.routes
 
     # Allowing custom fonts
 

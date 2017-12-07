@@ -1,5 +1,5 @@
 class Race < ApplicationRecord
-	has_many :checkpoints
+	has_many :locations
 	validates :name, :date, presence: true
 
 	def self.upcoming
@@ -11,18 +11,18 @@ class Race < ApplicationRecord
 	end
 
 	def start_point
-		checkpoints.first
+		locations.first
 	end
 
 	def checkins
-		checkpoints.all[1..-1]
+		locations.all[1..-1]
 	end
 
 	def has_start?
-		return checkpoints.length > 0
+		return locations.length > 0
 	end
 
 	def has_checkins?
-		return checkpoints.length > 1
+		return locations.length > 1
 	end
 end
