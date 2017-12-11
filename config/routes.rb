@@ -7,8 +7,9 @@ Rails.application.routes.draw do
 
   get 'faq', to: 'static_pages#faq'
 
-  resources :locations, except: :index
-  resources :races
+  resources :races do
+  	resources :locations, shallow: :true
+  end
 
   match "/404", :to => "errors#not_found", :via => :all
   match "/500", :to => "errors#internal_server_error", :via => :all

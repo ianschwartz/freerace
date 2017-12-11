@@ -5,6 +5,7 @@ class RacesController < ApplicationController
 
 	def show
 		@race = Race.find(params[:id]);
+		@location = @race.locations.new
 	end
 
 	def new

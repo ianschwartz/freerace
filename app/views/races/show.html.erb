@@ -21,6 +21,10 @@
 					<% end %>
 				</p>			
 			</div>
+
+			<div>
+				<%= link_to("Add a new checkpoint to this trail", new_race_location_path(@race, :location)) %>
+			</div>
 			<footer>
 				<header><%= link_to("All Upcoming Races", races_path) %></header>
 			</footer>

@@ -1,0 +1,21 @@
+<section id="post" class="wrapper bg-img" data-bg="banner2.jpg">
+	<div class="inner">
+		<article class="box">
+			<header>
+				<h2><%= @location.race.name %></h2>
+				<p>Add A New Location</p>
+			</header>
+			<div class="content">
+				<p class='center'>
+					<%= render "form" %>
+				</p>
+			</div>
+			<footer class='center'>
+				<header>
+					<%= link_to("Back", :back, class: "button alt") %>
+					<%= link_to("All Upcoming Races", races_path, class: "button alt") %>
+				</header>
+			</footer>
+		</article>
+	</div>
+</section>

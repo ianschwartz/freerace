@@ -1,0 +1,35 @@
+<section id="post" class="wrapper bg-img" data-bg="banner2.jpg">
+	<div class="inner">
+		<article class="box">
+			<header>
+				<p>Edit Location</p>
+			</header>
+			<div class="content">
+				<p>
+					<%= form_for(@location) do |f| %>
+						<%= f.text_field :name, placeholder: "Name of Location...", :required => true %>
+						<%= f.text_field :lat, placeholder: "Latitude", :required => true %>
+						<%= f.text_field :lng, placeholder: "Longitude", :required => true %>
+						<%= f.submit "Submit" %>
+					<% end %>
+				</p>
+
+				<header>
+					<p>Delete Location</p>
+				</header>
+
+				<p class='center'>
+					<%= link_to "Delete Location", @location, class: "button alert", method: :delete, data: { confirm: "You sure?" } %>
+				</p>
+			</div>
+
+			</header>
+			<footer class='center'>
+				<header>
+					<%= link_to("Back", :back, class: "button alt") %>
+					<%= link_to("All Upcoming Races", races_path, class: "button alt") %>
+				</header>
+			</footer>
+		</article>
+	</div>
+</section>

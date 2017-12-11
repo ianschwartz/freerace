@@ -4,6 +4,11 @@
 			<header>
 				<!--- Image of the location -->
 				<h2><%= @location.name %></h2>
+				<p>Used in the <%= link_to @location.race.name, @location.race %></p>
+				<p>
+					<%= link_to("Edit Location", edit_location_path(@location), class: "button special") %>
+					<%= link_to "Delete Location", @location, class: "button alert", method: :delete, data: { confirm: "You sure?" } %>
+				</p>
 				<% if @location.has_photo? %>
 					<% @location.photos.each do |c| %>
 						<%= image_tag(c.url, class: "location-image") %>
